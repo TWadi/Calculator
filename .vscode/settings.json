@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "compare": "c",
+        "spi_low.h": "c",
+        "stdint.h": "c"
+    }
+}

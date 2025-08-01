@@ -1,0 +1,17 @@
+# ninja log v5
+21	1158	7756932678467609	build.ninja	a3c2e0e9e67562c5
+96	1461	7756932692340744	CMakeFiles/led_blinker.dir/Core/Src/stm32f4xx_hal_msp.c.obj	86cc1a73506036
+84	1622	7756932694816067	CMakeFiles/led_blinker.dir/Core/Src/stm32f4xx_it.c.obj	634ef4f0009b5191
+109	1773	7756932696049630	CMakeFiles/led_blinker.dir/Core/Src/sysmem.c.obj	22d61360dd666f99
+74	1995	7756932698475027	CMakeFiles/led_blinker.dir/Core/Src/main.c.obj	6df1851f61caf91f
+156	2010	7756932698483526	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj	a88b7a82af38687e
+313	2177	7756932700847599	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj	bd84e2ab87674406
+279	2329	7756932702383683	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj	3057af659fa761e1
+147	1921	7756936737493531	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj	cd6400cade57f245
+191	2273	7756936741539371	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj	a98fb4858b8db6d0
+99	2302	7756936741585246	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj	38417514c793d569
+238	2471	7756936743797857	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj	3c843f132a2c3f38
+271	2599	7756936744498783	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj	d16f2a38025419e6
+84	1564	7756936983567247	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj	e62a795945429911
+130	1811	7756936986373571	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj	46ad5424471d9a36
+145	1815	7756936986378655	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj	19d1ba4ae06d5c7d
