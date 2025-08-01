@@ -1,0 +1,94 @@
+# Calculator on ILI9341 + STM32 Nucleo-F401RE
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)  
+[![Build](https://img.shields.io/badge/build-manual%20CMake-brightgreen.svg)]()  
+[![Platform](https://img.shields.io/badge/platform-STM32F401RE-blueviolet.svg)]()
+
+## Table of Contents
+
+1. [Project Overview](#project-overview)  
+2. [Features](#features)  
+3. [Hardware](#hardware)  
+   - [Required Components](#required-components)  
+   - [Wiring / Pinout](#wiring--pinout)  
+4. [Software Prerequisites](#software-prerequisites)  
+5. [Getting Started](#getting-started)  
+   - [Clone & Prepare](#clone--prepare)  
+   - [Build](#build)  
+   - [Flash](#flash)  
+6. [Usage](#usage)  
+7. [Architecture & Code Structure](#architecture--code-structure)  
+8. [Extending & Customization](#extending--customization)  
+9. [Contribution Guidelines](#contribution-guidelines)  
+10. [Troubleshooting](#troubleshooting)  
+11. [License](#license)  
+12. [Contact](#contact)
+
+---
+
+## Project Overview
+
+This project implements a graphical **calculator UI** on an **ILI9341 SPI TFT display** driven directly from register-level code on an **STM32 Nucleo-F401RE** board.  
+No high-level HAL graphics library is used for the core drawing—everything (SPI, GPIO, display protocol, UI) is controlled explicitly for transparency, performance, and learning.
+
+---
+
+## Features
+
+- Bare-metal SPI initialization and control (no bit-banging libraries)
+- ILI9341 display driver (RGB565, windowing, single pixel / rectangle)
+- Full-screen calculator UI with:
+  - Display window
+  - Button grid (digits/operators)
+  - Tiny scalable 3×5 font
+  - Initial value rendering
+- Helper API: draw pixel, fill rectangle, convert RGB888→RGB565
+- Easily extensible for dynamic input, expression evaluation, animations
+
+---
+
+## Hardware
+
+### Required Components
+
+- STM32 Nucleo-F401RE board  
+- ILI9341 SPI TFT display (e.g., 240×320 breakout)  
+- Jumper wires  
+- (Optional) Backlight control via GPIO or tied to 3.3V  
+
+### Wiring / Pinout (Nucleo-F401RE)
+
+| Signal        | ILI9341 Pin | Nucleo Header / MCU Pin | Role                |
+|---------------|-------------|-------------------------|---------------------|
+| CS            | CS          | PB6                     | Chip Select         |
+| SCK           | SCK         | PA5                     | SPI Clock           |
+| MOSI          | SDI / MOSI  | PA7                     | SPI Data Out        |
+| DC / RS       | DC          | PC7 (Arduino D9)        | Data/Command Select |
+| RESET         | RESET       | PA9 (Arduino D8)        | Display Reset       |
+| Backlight LED | LED         | PA10 (Arduino D2)       | Backlight control   |
+| VCC           | VCC         | 3.3V                    | Power               |
+| GND           | GND         | GND                     | Ground              |
+
+> Tip: Tie the LED/backlight pin to 3.3V for always-on, or drive via PA10 for dimming.
+
+---
+
+## Software Prerequisites
+
+- **ARM toolchain**: `arm-none-eabi-gcc` (GNU Tools for STM32)  
+- **CMake** ≥ 3.22  
+- **STM32CubeCLT** (used to generate support code; optional if you replace with your own)  
+- **STM32_Programmer_CLI** (for flashing over SWD)  
+- Git (recommended)  
+
+On Windows: using the distribution from ST (GNU-tools-for-STM32, STM32CubeCLT) as in this project structure.
+
+---
+
+## Getting Started
+
+### Clone & Prepare
+
+```bash
+git clone git@github.com:TWadi/Calculator.git
+cd Calculator
